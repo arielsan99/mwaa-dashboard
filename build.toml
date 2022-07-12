@@ -1,0 +1,10 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "mwaa-logs-dashboard-ariel"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-xj0bez4pyp27"
+s3_prefix = "mwaa-logs-dashboard-ariel"
+region = "us-east-1"
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
