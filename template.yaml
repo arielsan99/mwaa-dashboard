@@ -279,9 +279,6 @@ Outputs:
   StateMachine:
     Description: Step Functions state machine name
     Value: !Ref MWAADashboardStateMachine
-  EventBridgeRule:
-    Description: EventBridge rule name
-    Value: !Ref ScheduledRule
   DashboardTemplateTable:
     Description: CloudWatch Dashboard Template DynamoDB Table
     Value: !Ref DashboardTemplateTable
