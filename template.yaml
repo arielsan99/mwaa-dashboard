@@ -25,9 +25,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       AutoPublishAlias: live
-      CodeUri: functions/backup_dashboard/backup_dashboard.zip
-      Handler: app.lambda_handler
-      Runtime: python3.8
+      CodeUri: functions/backup_dashboard
       DeploymentPreference:
         Type: AllAtOnce
       Description: Backup MWAA CloudWatch Dashboards
@@ -49,9 +47,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       AutoPublishAlias: live
-      CodeUri: functions/create_dashboard/create_dashboard.zip
-      Handler: app.lambda_handler
-      Runtime: python3.8
+      CodeUri: functions/create_dashboard
       DeploymentPreference:
         Type: AllAtOnce
       Description: Create MWAA CloudWatch Dashboard
@@ -80,9 +76,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       AutoPublishAlias: live
-      CodeUri: functions/delete_dashboard/delete_dashboard.zip
-      Handler: app.lambda_handler
-      Runtime: python3.8
+      CodeUri: functions/delete_dashboard
       DeploymentPreference:
         Type: AllAtOnce
       Description: Delete MWAA CloudWatch Dashboard
@@ -104,9 +98,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       AutoPublishAlias: live
-      CodeUri: functions/create_alarms/create_alarms.zip
-      Handler: app.lambda_handler
-      Runtime: python3.8
+      CodeUri: functions/create_alarms
       DeploymentPreference:
         Type: AllAtOnce
       Description: Create MWAA CloudWatch Alarms
@@ -128,9 +120,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       AutoPublishAlias: live
-      CodeUri: functions/delete_alarms/delete_alarms.zip
-      Handler: app.lambda_handler
-      Runtime: python3.8
+      CodeUri: functions/delete_alarms
       Timeout: 10
       DeploymentPreference:
         Type: AllAtOnce
@@ -152,9 +142,8 @@ Resources:
   SeedDynamoDBFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: functions/seed_dynamodb/seed_dynamodb.zip
-      Handler: app.lambda_handler
-      Runtime: python3.8
+      FunctionName: SeedDynamoDBFunctions
+      CodeUri: functions/seed_dynamodb
       Description: Seed DynamoDB data
       Environment:
         Variables:
